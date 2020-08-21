@@ -1,0 +1,46 @@
+# TS
+.typescript
+
+# Storybook
+!.storybook
+
+# Dependencies
+node_modules
+
+# Ignore npm lock (use yarn.lock)
+package-lock.json
+
+# Build files
+build
+dist
+storybook-static
+
+# Misc
+.coverage
+.temp
+.npm
+.cache
+.*-cache
+
+# DotEnv
+.env
+
+# VSCode
+.vscode
+
+# WebStorm
+.idea
+
+# System
+*.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+*.lnk
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

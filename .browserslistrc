@@ -1,0 +1,8 @@
+[production]
+
+Chrome >= 83
+ChromeAndroid >= 83
+Firefox >= 78
+Safari >= 13.1
+iOS >= 12.4
+Edge >= 83

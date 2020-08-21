@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "commonjs",
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "downlevelIteration": true,
+    "outDir": ".typescript",
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": ["./", ".*.js", ".storybook/*.ts"],
+  "exclude": ["node_modules", "build", "storybook-static"]
+}

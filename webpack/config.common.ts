@@ -4,7 +4,6 @@ import HtmlPlugin from 'html-webpack-plugin';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import webpack, { Plugin, ResolvePlugin } from 'webpack';
 
-import { nodeLibsBrowser } from './node';
 import * as paths from './paths';
 
 // Common plugins
@@ -52,7 +51,6 @@ export const commonConfig: webpack.Configuration = {
     timings: false,
     version: false,
   },
-  node: nodeLibsBrowser,
 };
 
 export default commonConfig;

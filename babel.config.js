@@ -42,6 +42,6 @@ module.exports = {
   plugins: [
     ['babel-plugin-styled-components', pluginStyledComponents],
     ['react-hot-loader/babel'],
-    ['effector/babel-plugin', isDevelopment && pluginEffector],
+    ['effector/babel-plugin', (isDevelopment || isTest) && pluginEffector],
   ],
 };

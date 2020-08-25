@@ -1,13 +1,15 @@
 import fs from 'fs';
+import { normalize } from 'path';
 
-export const root = fs.realpathSync(`${__dirname}/..`);
+// normalize paths for Windows
+export const root = normalize(fs.realpathSync(`${__dirname}/..`));
 
-export const source = `${root}/src`;
-export const build = `${root}/build`;
+export const source = normalize(`${root}/src`);
+export const build = normalize(`${root}/build`);
 
-export const entryMain = `${source}/index.ts`;
-export const indexHtml = `${source}/index.html`;
-export const favicon = `${source}/favicon.png`;
+export const entryMain = normalize(`${source}/index.ts`);
+export const indexHtml = normalize(`${source}/index.html`);
+export const favicon = normalize(`${source}/favicon.png`);
 
 export const extensions = ['.mjs', '.js', '.json', '.jsx', '.ts', '.tsx'];
 export const jsPattern = /\.(mjs|js|jsx|ts|tsx)$/;
@@ -17,20 +19,20 @@ export const cssPattern = /\.(css)$/;
 export const scssPattern = /\.(scss)$/;
 
 export const outputDev = {
-  assets: '[path][name].[ext]',
-  js: 'js/[name].js',
-  jsChunks: 'js/[name].js',
-  css: 'css/[name].css',
-  cssChunks: 'css/[name].css',
+  assets: normalize('[path][name].[ext]'),
+  js: normalize('js/[name].js'),
+  jsChunks: normalize('js/[name].js'),
+  css: normalize('css/[name].css'),
+  cssChunks: normalize('css/[name].css'),
 };
 
 export const outputProd = {
-  assets: 'assets/[name].[contenthash:6].[ext]',
-  js: 'js/[name].[contenthash:6].js',
-  jsChunks: 'js/[name].[contenthash:6].js',
-  css: 'css/[name].[contenthash:6].css',
-  cssChunks: 'css/[name].[contenthash:6].css',
+  assets: normalize('assets/[name].[contenthash:6].[ext]'),
+  js: normalize('js/[name].[contenthash:6].js'),
+  jsChunks: normalize('js/[name].[contenthash:6].js'),
+  css: normalize('css/[name].[contenthash:6].css'),
+  cssChunks: normalize('css/[name].[contenthash:6].css'),
 };
 
-export const env = `${root}/.env`;
-export const envRef = `${root}/.env.ref`;
+export const env = normalize(`${root}/.env`);
+export const envRef = normalize(`${root}/.env.ref`);

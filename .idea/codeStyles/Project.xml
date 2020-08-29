@@ -50,6 +50,7 @@
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="JavaScript">
+      <option name="RIGHT_MARGIN" value="80" />
       <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
       <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
       <option name="ALIGN_MULTILINE_FOR" value="false" />

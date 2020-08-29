@@ -7,7 +7,6 @@ const { compilerOptions } = require('./tsconfig.json');
 /** @type import('@jest/types').Config.InitialOptions */
 const config = {
   coverageDirectory: '.coverage',
-  testEnvironment: 'node',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: `${__dirname}/`,
   }),

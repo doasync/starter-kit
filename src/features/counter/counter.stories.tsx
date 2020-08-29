@@ -1,3 +1,5 @@
+import './init';
+
 import { Meta } from '@storybook/react';
 
 import { AppFrame } from '~/core/app-frame';

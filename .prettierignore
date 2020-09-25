@@ -1,4 +1,6 @@
 # Prettier
+.madgerc
+test.env
 yarn.lock
 .yarnclean
 .env.ref
@@ -15,6 +17,7 @@ yarn.lock
 *.ttf
 *.txt
 *.pb
+*.toml
 
 # TS
 .typescript

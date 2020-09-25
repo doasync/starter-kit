@@ -2,7 +2,8 @@ import './init';
 
 import { argumentHistory } from '~/lib/test-kit';
 
-import { $timer, $timerWorking, tickFx, toggle } from './model';
+import { $timer, $timerWorking, toggle } from './model';
+import { tickFx } from './tick-fx';
 
 describe('counter', () => {
   const tick = jest.fn().mockImplementation(async () => Promise.resolve());

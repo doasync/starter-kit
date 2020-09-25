@@ -20,7 +20,9 @@ declare module '*.woff2' {
   export default url;
 }
 declare module '*.svg' {
-  const Component: React.ComponentType<Record<string, unknown>>;
+  import { ComponentType } from 'react';
+
+  const Component: ComponentType<Record<string, unknown>>;
   // noinspection all
   export default Component;
 }

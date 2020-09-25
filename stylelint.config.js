@@ -22,6 +22,30 @@ const config = {
         ignore: ['pseudo-classes'],
       },
     ],
+    // Fix bugged `value-keyword-case` rule (allow "." and "[")
+    'value-keyword-case': [
+      'lower',
+      {
+        // eslint-disable-next-line unicorn/better-regex, no-useless-escape
+        ignoreKeywords: [/^.*[.\[].*$/],
+      },
+    ],
+    // Fix bugged `value-keyword-case` rule (allow to use "myVar.toString()")
+    'function-name-case': [
+      'lower',
+      {
+        ignoreFunctions: [/^.*\.toString$/],
+      },
+    ],
+    // Fix disallowed "border: none";
+    'declaration-property-value-disallowed-list': {
+      border: [0],
+      'border-top': [0],
+      'border-right': [0],
+      'border-bottom': [0],
+      'border-left': [0],
+    },
+    'comment-word-blacklist': null,
   },
 };
 

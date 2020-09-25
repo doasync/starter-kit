@@ -2,7 +2,6 @@ const isTest = process.env.NODE_ENV === 'test';
 const isDevelopment =
   process.env.WEBPACK_DEV_SERVER === 'true' ||
   process.env.NODE_ENV === 'development';
-process.env.NODE_ENV = isDevelopment ? 'development' : 'production';
 
 const presetReact = {
   development: isDevelopment,

@@ -1,4 +1,5 @@
 import fs from 'fs';
+// eslint-disable-next-line unicorn/import-style
 import { normalize } from 'path';
 
 // normalize paths for Windows

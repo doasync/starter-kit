@@ -6,7 +6,7 @@ import { createDecorator, createVariant } from '~/lib/storybook-kit';
 import { Hello } from './hello';
 
 export default {
-  title: 'Features/Hello',
+  title: 'Examples/Hello',
   parameters: {
     // Show addons panel
     options: {

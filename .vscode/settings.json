@@ -1,21 +1,22 @@
 {
-    "telemetry.enableTelemetry": false,
-    "workbench.fontAliasing": "default",
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-        "source.fixAll.stylelint": true
-    },
-    "eslint.alwaysShowStatus": true,
-    "eslint.format.enable": true,
-    "cSpell.words": [
-        "woff",
-        "babelrc",
-        "browserlist",
-        "entrypoints",
-        "pathinfo",
-        "prettierrc"
-    ]
+  "telemetry.enableTelemetry": false,
+  "workbench.fontAliasing": "default",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "cSpell.words": [
+    "woff",
+    "babelrc",
+    "browserlist",
+    "entrypoints",
+    "pathinfo",
+    "prettierrc"
+  ],
+  "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
 }

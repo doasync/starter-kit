@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import LogoSvg from '~/assets/images/logo.svg';
-
 import wavingHandEmoji from './assets/emoji/1f44b.png';
+import LogoSvg from './assets/logo.svg';
+import { HelloProps } from './types';
 
 const Box = styled.div`
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   padding: 16px;
 `;
 
@@ -30,12 +31,8 @@ const Logo = styled(LogoSvg)`
   width: 64px;
 `;
 
-export type Props = {
-  greeting: string;
-};
-
 // Root child
-export const Hello = ({ greeting }: Props) => (
+export const Hello = ({ greeting }: HelloProps) => (
   <Box>
     <img src={wavingHandEmoji} alt="Waving Hand Emoji" />
     <Greeting>{greeting}</Greeting>

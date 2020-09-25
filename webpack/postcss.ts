@@ -4,7 +4,7 @@ import presetEnv from 'postcss-preset-env';
 
 import { isDevelopment } from './env';
 
-export const postcssConfig = {
+export const postcssOptions = {
   syntax: 'postcss-scss',
   plugins: [
     presetEnv({

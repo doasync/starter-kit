@@ -4,5 +4,6 @@ import { ComponentType, createElement } from 'react';
 export const createDecorator = <Props = Record<string, unknown>>(
   component: ComponentType<Props>,
   props?: Props
-) => (story: Story<Props>): JSX.Element =>
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+) => (story: Story<Props>) =>
   createElement(component, props, createElement(story));

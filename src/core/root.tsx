@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Counter } from '~/features/counter';
-import { Hello } from '~/features/hello';
+import { Counter } from '@/counter';
+import { Hello } from '@/hello';
 
 export const Root = () => (
   <>

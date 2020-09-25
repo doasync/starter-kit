@@ -1,13 +1,7 @@
 import { guard } from 'effector';
 
-import { VoidFn } from '~/lib/effector-kit';
-
-import { $timer, $timerWorking, tickFx, toggle } from './model';
-
-const tickDelay = 500;
-const tick: VoidFn = async () => new Promise((rs) => setTimeout(rs, tickDelay));
-
-tickFx.use(tick);
+import { $timer, $timerWorking, toggle } from './model';
+import { tickFx } from './tick-fx';
 
 $timerWorking.on(toggle, (state) => !state);
 $timer.on(tickFx, (time) => time + 1);

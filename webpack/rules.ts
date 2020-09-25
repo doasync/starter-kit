@@ -3,7 +3,7 @@ import { RuleSetRule } from 'webpack';
 
 import { isDevelopment } from './env';
 import * as paths from './paths';
-import { postcssConfig } from './postcss';
+import { postcssOptions } from './postcss';
 
 export interface Options {
   inlineCssOnly?: boolean;
@@ -38,8 +38,7 @@ export const createRules = (options: Options = {}): RuleSetRule[] => {
       {
         loader: 'postcss-loader',
         options: {
-          ident: 'postcss',
-          ...postcssConfig,
+          postcssOptions,
         },
       },
     ],

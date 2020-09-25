@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
-const globalStyleCSS = css`
+const globalStyle = css`
   ${normalize};
 
   html {
@@ -24,4 +24,4 @@ const globalStyleCSS = css`
   }
 `;
 
-export const GlobalStyle = createGlobalStyle`${globalStyleCSS}`;
+export const GlobalStyle = createGlobalStyle`${globalStyle}`;

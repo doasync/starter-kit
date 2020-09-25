@@ -52,7 +52,23 @@ const config = {
       rules: {
         'sort-imports': 'off',
         'import/order': 'off',
-        'simple-import-sort/sort': 'error',
+        'simple-import-sort/sort': [
+          'error',
+          {
+            groups: [
+              // Side effect imports.
+              ['^\\u0000'],
+              // Packages
+              ['^@?\\w'],
+              // Absolute imports
+              ['^[^.]'],
+              // Features
+              ['^@/\\w'],
+              // Relative imports
+              ['^\\.'],
+            ],
+          },
+        ],
         'import/first': 'error',
         'import/newline-after-import': 'error',
         'import/no-duplicates': 'error',
@@ -228,19 +244,7 @@ const config = {
       'WithStatement',
       'SequenceExpression',
     ],
-    'max-len': [
-      'warn',
-      {
-        code: 80, // Prettier default
-        tabWidth: 2,
-        ignoreComments: true,
-        ignoreUrls: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals: true,
-      },
-    ],
-    'no-restricted-imports': ['error', { patterns: ['../*'] }],
+    'no-restricted-imports': ['error', { patterns: ['../*', '~/@/*'] }],
     'unicorn/prevent-abbreviations': [
       'error',
       {
@@ -258,6 +262,8 @@ const config = {
           Env: true,
           params: true,
           Params: true,
+          param: true,
+          Param: true,
           config: true,
           Config: true,
         },
@@ -272,14 +278,7 @@ const config = {
         ignoreFunctionalComponents: true,
       },
     ],
-    'padding-line-between-statements': [
-      'error',
-      {
-        blankLine: 'always',
-        prev: 'multiline-block-like',
-        next: '*',
-      },
-    ],
+    '@typescript-eslint/comma-dangle': 'off',
   },
 };
 

@@ -18,8 +18,7 @@
     "noEmit": true,
     "baseUrl": "./",
     "paths": {
-      "~/*": ["src/*"],
-      "@/*": ["src/@/*"]
+      "~/*": ["src/*"]
     }
   },
   "include": ["./", ".*.js", ".storybook/*.ts"],
